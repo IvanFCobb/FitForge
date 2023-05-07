@@ -1,0 +1,21 @@
+{
+  "name": "fitforge_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss src/styles.css -o fitforge/static/css/styles.css",
+    "watch": "postcss src/styles.css -o fitforge/static/css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.2"
+  }
+}

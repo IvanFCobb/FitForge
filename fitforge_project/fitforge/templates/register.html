@@ -1,0 +1,66 @@
+{% extends 'base.html' %} {% block content %}
+<div class="flex justify-center items-center h-full">
+  <div class="w-full max-w-md">
+    <h2 class="text-3xl font-bold mb-4 text-center">Sign up</h2>
+    <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      {% csrf_token %}
+      <div class="mb-4">
+        <label
+          for="{{ form.username.id_for_label }}"
+          class="block text-gray-700 font-bold mb-2"
+          >Username</label
+        >
+        {{ form.username }}
+      </div>
+      <div class="mb-4">
+        <label
+          for="{{ form.password1.id_for_label }}"
+          class="block text-gray-700 font-bold mb-2"
+          >Password</label
+        >
+        {{ form.password1 }}
+      </div>
+      <div class="mb-4">
+        <label
+          for="{{ form.password2.id_for_label }}"
+          class="block text-gray-700 font-bold mb-2"
+          >Confirm password</label
+        >
+        {{ form.password2 }}
+      </div>
+      <div class="mb-4">
+        <label
+          for="{{ form.height.id_for_label }}"
+          class="block text-gray-700 font-bold mb-2"
+          >Height</label
+        >
+        {{ form.height }}
+      </div>
+      <div class="mb-4">
+        <label
+          for="{{ form.weight.id_for_label }}"
+          class="block text-gray-700 font-bold mb-2"
+          >Weight</label
+        >
+        {{ form.weight }}
+      </div>
+      <div class="mb-6">
+        <label
+          for="{{ form.goal_weight.id_for_label }}"
+          class="block text-gray-700 font-bold mb-2"
+          >Goal weight</label
+        >
+        {{ form.goal_weight }}
+      </div>
+      <div class="flex items-center justify-between">
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Sign up
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
